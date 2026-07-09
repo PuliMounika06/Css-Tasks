@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:black;
+}
+
+.cube{
+    position:relative;
+    width:200px;
+    height:200px;
+    transform-style:preserve-3d;
+    animation:rotate 8s linear infinite ;
+}
+
+/* Image inside the cube */
+.picture{
+    position:absolute;
+    width:120px;
+    height:120px;
+    top:40px;
+    left:40px;
+    object-fit:cover;
+    transform:translateZ(0);
+}
+
+.face{
+    position:absolute;
+    width:200px;
+    height:200px;
+    border:2px solid white;
+    opacity:0.5;      /* Makes the cube transparent */
+}
+
+/* Front */
+.front{
+    background:red;
+    transform:translateZ(100px);
+}
+
+/* Back */
+.back{
+    background:blue;
+    transform:rotateY(180deg) translateZ(100px);
+}
+
+/* Right */
+.right{
+    background:green;
+    transform:rotateY(90deg) translateZ(100px);
+}
+
+/* Left */
+.left{
+    background:orange;
+    transform:rotateY(-90deg) translateZ(100px);
+}
+
+/* Top */
+.top{
+    background:purple;
+    transform:rotateX(90deg) translateZ(100px);
+}
+
+/* Bottom */
+.bottom{
+    background:cyan;
+    transform:rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes rotate{
+    from{
+        transform:rotateX(0deg) rotateY(0deg);
+    }
+    to{
+        transform:rotateX(360deg) rotateY(360deg);
+    }
+}

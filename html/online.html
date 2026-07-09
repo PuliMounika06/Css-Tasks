@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Reference</title>
+
+
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f1f3f6;
+    }
+
+    /* Header */
+    header {
+        background-color: #2874f0;
+        color: white;
+        padding: 15px 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* Main layout */
+    main {
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    /* Left column */
+    .left-column {
+        width: 25%;
+        background: white;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    /* Dropdown menu */
+    .dropdown {
+        margin-bottom: 15px;
+    }
+    .dropdown h3 {
+        margin: 0;
+        padding: 10px;
+        background: #f0f0f0;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .dropdown-content {
+        display: none;
+        padding-left: 15px;
+        background: #fafafa;
+        border-left: 3px solid #2874f0;
+    }
+    .dropdown-content a {
+        display: block;
+        padding: 5px 0;
+        text-decoration: none;
+        color: #333;
+    }
+    .dropdown-content a:hover {
+        color: #2874f0;
+    }
+
+    /* Right column */
+    .right-column {
+        flex: 1;
+        background: white;
+        padding: 15px;
+        border-radius: 5px;
+        min-height: 300px;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #172337;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    header a{
+        
+    color:"white"  ;
+        
+    }
+    </style>
+
+    
+</head>
+<body>
+
+<header>
+    Introduction 
+                <a href="#">grocery</a>
+         <a href="#">fashion</a>
+           <a href="#">jewellery</a>
+            <a href="#">skin care</a>
+           <a href="#">sale store</a>
+                      <tr> <a href="#">add to cart</a>
+
+</header>
+
+<main>
+    <!-- Left Column -->
+    <div class="left-column">
+        <div class="dropdown">
+            <h3 onclick="toggleDropdown(this)">Electronics</h3>
+            <div class="dropdown-content">
+                <a href="#">Mobiles</a>
+                <a href="#">Laptops</a>
+                <a href="#">Cameras</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <h3 onclick="toggleDropdown(this)">Fashion</h3>
+            <div class="dropdown-content">
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <h3 onclick="toggleDropdown(this)">Home</h3>
+            <div class="dropdown-content">
+                <a href="#">Furniture</a>
+                <a href="#">Kitchen</a>
+                <a href="#">Decor</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <h3 onclick="toggleDropdown(this)">Sports</h3>
+            <div class="dropdown-content">
+                <a href="#">Cricket</a>
+                <a href="#">Football</a>
+                <a href="#">Gym</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+        <h2>Welcome to Flipkart Clone</h2>
+        <p>This is the main content area. You can add product listings, banners, or any other content here.</p>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 Flipkart Clone | Created for Learning
+</footer>
+
+<script>
+    // Toggle dropdown visibility
+    function toggleDropdown(element) {
+        const content = element.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>
+
+
